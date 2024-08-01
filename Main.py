@@ -15,23 +15,6 @@ headers = {
     'referer': 'www.google.com'
 }
 
-def send_messages():
-    with open('password.txt', 'r') as file:
-        password = file.read().strip()
-
-    entered_password = password
-
-    if entered_password != password:
-        print('❌] 🔜 Incorrect Password Contact Devil')
-        sys.exit()
-
-    mmm = requests.get('https://pastebin.com/raw/tGiQEsgb').text.strip()
-
-    if mmm not in password:
-        print('❌] 🔜 Incorrect Password Contact Devil')
-        sys.exit()
-
-
 @app.route('/')
 def index():
 
